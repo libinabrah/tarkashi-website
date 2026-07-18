@@ -1,4 +1,4 @@
-# Tarkashi — Onam Festival Jewellery Collection Website
+# Tarkashi — Onam Collection Website (Jewellery, Mundu &amp; Sarees)
 
 A static, no-build website: plain HTML, CSS and JavaScript. No npm, no framework,
 no compilation step — you can open `index.html` directly, or serve it with a
@@ -17,12 +17,41 @@ tarkashi-website/
 ```
 
 To add, remove, or edit a product, open `script.js` and edit the `PRODUCTS`
-array near the top — each entry is one card in the Collection grid.
+array near the top — each entry is one card in the Collection grid. This
+array was generated from your spreadsheet (`Excel_to_update_the_Jewellery_data.xlsx`),
+so the spreadsheet and the site can drift apart if you only edit one of them
+— treat `script.js` as the live version going forward, or let us know if
+you'd like a script that regenerates it from a fresh spreadsheet each time.
 
-To change the WhatsApp numbers, update `WHATSAPP_NUMBER` in `script.js`
-(used for the floating button, header button and product enquiries) and the
-two `href="https://wa.me/..."` links in `index.html` (header + footer +
-contact section).
+To change the WhatsApp numbers, update `WHATSAPP_MAIN` and
+`WHATSAPP_SECONDARY` in `script.js`, and the matching
+`href="https://wa.me/..."` links in `index.html` (header button, footer,
+contact section, and the floating button near the end of the file).
+
+## What changed in this update
+
+- **12 more photos matched**, bringing the total to **76 of 78 items with a
+  photo** — including the three long-standing empty files, which finally
+  came through with real content this time (Floral and eye design necklace,
+  Golden necklace with purple stones, Golden rudraksham long chain), plus
+  the "Golden Zari self check design with black printed bordered on soft
+  Tissue set Mundu" photo.
+- Only **2 items** remain without a photo — see below.
+
+### Items still needing a photo (2)
+
+- **Silver antique hooks Jhumka** — no photo received for this one (there's
+  a similarly-named "Mehandi antique gold hooks Jhumka" already matched to
+  its own photo, so this is a distinct, still-missing item).
+- **Index / pointer finger Ring** — no ring photos have been sent yet at
+  all, so this whole category is still photo-less.
+
+### One extra photo without a matching product
+
+`Mehandi_golden_Bangle_with_kundanstone.jpeg` is still sitting unused — the
+spreadsheet only has a row for "...with **double colour** kundanstone",
+which already has its own photo. If this second bangle should be its own
+listing, add a row for it in the spreadsheet with that exact name.
 
 ---
 
@@ -74,12 +103,12 @@ free on any static host:
 
 ## Notes & things to double-check before launch
 
-- **Product names, categories and prices** in `script.js` are placeholders
-  based on what's visible in each photo — please review and correct them
-  (especially prices, which are all currently set to "Enquire").
-- **WhatsApp numbers**: the site links to `+91 89260 75990` and
-  `+91 89446 49940` (India country code assumed from the poster's local
-  10-digit numbers) — confirm these are correct before going live.
+- **2 of 78 products still need photos** — see the list above (Silver
+  antique hooks Jhumka, and the Index / pointer finger Ring).
+- One extra photo (`Mehandi_golden_Bangle_with_kundanstone.jpeg`) has no
+  matching spreadsheet row — see above.
+- **WhatsApp numbers**: confirm `+353 89 446 4994` (main) and
+  `+353 89 260 7599` (secondary) are correct and both are on WhatsApp.
 - **Fonts** (Cormorant Garamond + Poppins) load from Google Fonts over the
   internet — an internet connection is needed to see them styled correctly;
   otherwise the browser falls back to a default serif/sans-serif.
